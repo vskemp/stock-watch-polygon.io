@@ -11,4 +11,5 @@ A stocks application that shows the gainers and losers of the day along with the
 ## 'npm install' all dependencies
 
 Veronica Kemp
-veronicakemp.com
+
+[veronicakemp.com](https://veronicakemp.com)
