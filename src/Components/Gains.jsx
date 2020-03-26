@@ -11,7 +11,7 @@ export default class Gains extends Component {
   };
   //allows auto population of data from api
   async componentDidMount() {
-    const { data } = await axios.get(`https://api.polygon.io/v1/meta/exchanges?apiKey=****`)
+    const { data } = await axios.get(`https://api.polygon.io/v1/meta/exchanges?apiKey=***`)
     this.setState({ gainers: data })
     // debugger;
     console.log(data);

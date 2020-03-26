@@ -8,7 +8,7 @@ export default class Loser extends Component {
   };
   // mounting api data for losers
   async componentDidMount() {
-    const { data } = await axios.get(`https://api.polygon.io/v1/meta/exchanges?apiKey=****`)
+    const { data } = await axios.get(`https://api.polygon.io/v2/snapshot/locale/us/markets/stocks/gainers?apiKey=***`)
     this.setState({ losers: data })
     console.log(data);
   }
