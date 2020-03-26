@@ -6,7 +6,7 @@ export default class Loser extends Component {
     losers: "",
   };
   async componentDidMount() {
-    const { data } = await axios.get(`https://api.polygon.io/v2/snapshot/locale/us/markets/stocks/losers?apiKey=EncqzmX5N6BqskqVV3Lp77lx_hQm_0bsOiSleP`)
+    const { data } = await axios.get(`https://api.polygon.io/v2/snapshot/locale/us/markets/stocks/losers?apiKey=***`)
     this.setState({ losers: data.tickers })
     // console.log(data);
   }
