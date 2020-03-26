@@ -5,16 +5,19 @@ import Loser from './Components/Losers';
 import './App.css';
 import GainCloses from './Components/GainCloses';
 import LossCloses from './Components/LossCloses';
+import Header from './Components/Header';
 
 function App() {
   return (
     <div className="App">
-      It's a Polygon.io app
       <div>
-        <Gains />
-        <Loser />
-        <GainCloses />
-        <LossCloses />
+        <Header />
+        <div className="container">
+          <Gains />
+          <Loser />
+          <GainCloses />
+          <LossCloses />
+        </div>
       </div>
     </div>
   );
