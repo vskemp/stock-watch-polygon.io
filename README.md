@@ -12,4 +12,3 @@ A stocks application that shows the gainers and losers of the day along with the
 
 Veronica Kemp
 
-[veronicakemp.com](https://veronicakemp.com)
