@@ -10,7 +10,7 @@ export default class GainCloses extends Component {
   };
   // mounting api data for previous gainer close
   async componentDidMount() {
-    const { data } = await axios.get(`https://api.polygon.io/v1/meta/exchanges?apiKey=****`)
+    const { data } = await axios.get(`https://api.polygon.io/v1/meta/exchanges?apiKey=***`)
     this.setState({ gcloses: data })
     // console.log(data);
   }

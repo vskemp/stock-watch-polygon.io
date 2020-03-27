@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import 'react-bulma-components/dist/react-bulma-components.min.css';
+// import NavBar from '../NavBar';
+// import Header from '../Header';
 
-export default class Loser extends Component {
+export default class Losers extends Component {
   state = {
     losers: [],
   };
@@ -15,15 +17,19 @@ export default class Loser extends Component {
   render() {
     console.log(this.state);
     return (
-      <div className="card">
-        <p className="title">
-          Todays top 20 losers:
+      <div>
+        {/* <Header />
+        <NavBar /> */}
+        <div className="card">
+          <p className="title">
+            Todays top 20 losers:
           </p>
-        {Object.keys(this.state.losers).map(loss => (
-          <ul key={loss} value={loss} className="card-content">
-            {this.state.losers[loss].name}
-          </ul>
-        ))}
+          {Object.keys(this.state.losers).map(loss => (
+            <ul key={loss} value={loss} className="card-content">
+              {this.state.losers[loss].name}
+            </ul>
+          ))}
+        </div>
       </div>
     );
   }
