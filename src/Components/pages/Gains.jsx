@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import 'react-bulma-components/dist/react-bulma-components.min.css';
-// import NavBar from '../NavBar';
-// import Header from '../Header';
+import Header from '../Header';
+import Footer from '../Footer';
 
 export default class Gains extends Component {
   state = {
@@ -17,22 +17,29 @@ export default class Gains extends Component {
   }
 
   render() {
-    console.log(this.state);
+    // Always double check that state is what it should be, same with the data you are receiving
+    // console.log(this.state); 
     return (
       <div>
-        {/* <Header />
-        <NavBar /> */}
-        <div className="card">
-          <p className="title">
-            Todays top 20 gainers:
+        <Header />
+        <div className="columns">
+          <div className="column"></div>
+          <div className="column">
+            <div className="box">
+              <p className="title has-text-centered">
+                Today's Top 20 Gainers:
           </p>
-          {Object.keys(this.state.gainers).map(gain => (
-            <ul key={gain} value={gain} className="card-content">
-              {this.state.gainers[gain].name}
-            </ul>
-          ))}
+              {Object.keys(this.state.gainers).map(gain => (
+                <ul key={gain} value={gain} className="content has-text-centered">
+                  {this.state.gainers[gain].name}
+                </ul>
+              ))}
+            </div>
+          </div>
+          <div className="column"></div>
         </div>
-      </div>
+        <Footer />
+      </div >
     );
   }
 }
