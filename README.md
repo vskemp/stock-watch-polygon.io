@@ -3,7 +3,7 @@ A stocks application that shows the gainers and losers of the day along with the
 ## API
 [Polygon.io](https://polygon.io)
 - Snapshot: Gainers/Losers
-- Previos Close
+- Previous Close
 
 ## [React](https://reactjs.org/)
 ## [Bulma.io](https://bulma.io)
