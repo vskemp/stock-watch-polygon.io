@@ -2,57 +2,41 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import 'react-bulma-components/dist/react-bulma-components.min.css';
 import Header from '../Header';
-import Footer from '../Footer';
 
 export default class GainCloses extends Component {
   state = {
-    gcloses: [],
-    lcloses: []
+    closes: [],
   };
 
   async componentDidMount() {
-    const { data } = await axios.get(`https://api.polygon.io/v1/meta/exchanges?apiKey=***`)
-    this.setState({ lcloses: data });
-    this.setState({ gcloses: data });
+    const { data } = await axios.get(`https://api.polygon.io/v2/aggs/ticker/AAPL/prev?apiKey=***`)
+    this.setState({ closes: data });
     // console.log(data);
 
   }
 
   // }
   render() {
-    // console.log(this.state);
+    console.log(this.state);
     return (
-      <div>
+      <div >
         <Header />
-        <div className="columns" style={{ padding: 15 }}>
+        <div className="columns " style={{ padding: 15 }}>
           {/* <div className="column"></div> */}
           <div className="column">
             <div className="box">
               <p className="title has-text-centered">
-                Previous Gainer Close:
+                Previous Close:
               </p>
-              {Object.keys(this.state.gcloses).map(gclose => (
-                <ol key={gclose} value={gclose} className="content has-text-centered">
-                  {this.state.gcloses[gclose].name}
+              {Object.keys(this.state.closes).map(close => (
+                <ol key={close} value={close} className="content has-text-centered">
+                  {this.state.closes[close].tickers}
                 </ol>
               ))}
             </div>
           </div>
-          <div className="column">
-            <div className="box">
-              <p className="title has-text-centered">
-                Previous Loser Close:
-                  </p>
-              {Object.keys(this.state.lcloses).map(lclose => (
-                <ol key={lclose} value={lclose} className="content has-text-centered">
-                  {this.state.lcloses[lclose].name}
-                </ol>
-              ))}
-            </div>
-          </div>
-          {/* <div className="column"></div> */}
         </div>
-        <Footer />
+        <div className="column"></div>
       </div>
     );
   }

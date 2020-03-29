@@ -1,6 +1,5 @@
 import React from 'react';
 import Header from '../Header';
-import Footer from '../Footer';
 
 function Home() {
   return (
@@ -8,7 +7,7 @@ function Home() {
       <div className="header">
         <Header />
       </div>
-      <div className="columns" style={{ padding: 15 }}>
+      <div className="columns " style={{ padding: 15 }}>
         <div className="column">
           <div className="box">
             <div className="title has-text-centered">
@@ -40,7 +39,6 @@ function Home() {
           </div>
         </div>
       </div>
-      <Footer />
     </div >
   );
 }

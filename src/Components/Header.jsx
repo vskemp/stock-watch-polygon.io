@@ -3,7 +3,7 @@ import '../App.css';
 
 function Header() {
   return (
-    <div className="header">
+    <div className="header ">
       <div className="title is-1">
         Polygon.io App
     </div>

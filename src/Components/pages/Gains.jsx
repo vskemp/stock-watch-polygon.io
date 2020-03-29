@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import 'react-bulma-components/dist/react-bulma-components.min.css';
 import Header from '../Header';
-import Footer from '../Footer';
 
 export default class Gains extends Component {
   state = {
@@ -38,7 +37,6 @@ export default class Gains extends Component {
           </div>
           <div className="column"></div>
         </div>
-        <Footer />
       </div >
     );
   }

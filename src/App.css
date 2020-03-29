@@ -1,11 +1,30 @@
 .navbar {
-  /* display:flex; */
-  /* justify-content: space-evenly; */
+
   font-size: 15px;
   font-weight: bolder;
   padding: 10px;
 
 }
+
+.main {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.section {
+  flex: 1;
+}
+
+p.subtitle {
+  font-size: 30px;
+}
+
+
+div.title {
+  font-size: 40px;
+}
+
 
 #nav-toggle-state {
   display: none;
