@@ -5,7 +5,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import GainCloses from '../Components/pages/GainCloses';
+import PCloses from '../Components/pages/PCloses';
 import Home from '../Components/pages/Home';
 import Gains from '../Components/pages/Gains';
 import Losers from '../Components/pages/Losers';
@@ -55,7 +55,7 @@ export default class NavBar extends Component {
         renders the first one that matches the current URL. */}
         <Switch>
           <Route path="/pclose">
-            <GainCloses />
+            <PCloses />
           </Route>
           <Route path="/losers">
             <Losers />

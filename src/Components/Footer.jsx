@@ -2,9 +2,7 @@ import React from 'react';
 
 export default function Footer() {
   return (
-    <body classname="main">
-      <div className="section">
-      </div>
+    <div className="section">
       <footer className="footer">
         <div className="content has-text-centered">
           <p>
@@ -12,7 +10,7 @@ export default function Footer() {
           </p>
         </div>
       </footer>
-    </body>
+    </div>
   )
 };
 

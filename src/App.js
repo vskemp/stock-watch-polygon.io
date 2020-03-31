@@ -25,7 +25,7 @@ export default class App extends Component {
       // rotate: [0, 20],
       alpha: [0.6, 0],
       scale: [1, 0.1],
-      position: "all", // all or center or {x:1,y:1,width:100,height:100}
+      position: "{x:1,y:1,width:100,height:100}", // all or center or {x:1,y:1,width:100,height:100}
       color: ["random", "#ff0000"],
       cross: "dead", // cross or bround
       random: 15,  // or null,

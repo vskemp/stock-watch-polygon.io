@@ -1,16 +1,23 @@
+
 import React, { Component } from 'react';
 import axios from 'axios';
 import 'react-bulma-components/dist/react-bulma-components.min.css';
 import Header from '../Header';
 
-export default class GainCloses extends Component {
+export default class PCloses extends Component {
   state = {
-    closes: [],
+    name: [],
+    open: [],
+    close: []
   };
 
   async componentDidMount() {
     const { data } = await axios.get(`https://api.polygon.io/v2/aggs/ticker/AAPL/prev?apiKey=***`)
-    this.setState({ closes: data });
+    this.setState({
+      name: data,
+      open: data,
+      close: data
+    });
     // console.log(data);
 
   }
@@ -28,11 +35,11 @@ export default class GainCloses extends Component {
               <p className="title has-text-centered">
                 Previous Close:
               </p>
-              {Object.keys(this.state.closes).map(close => (
-                <ol key={close} value={close} className="content has-text-centered">
-                  {this.state.closes[close].tickers}
-                </ol>
-              ))}
+              <ul className="content has-text-centered">
+                <li>Ticker: {this.state.name}</li>
+                <li>Open: {this.state.open}</li>
+                <li>Close: {this.state.open}</li>
+              </ul>
             </div>
           </div>
         </div>
