@@ -21,6 +21,16 @@ function Home() {
       <div className="column">
         <div className="box">
           <div className="title has-text-centered">
+            Previous Close:
+          </div>
+          <p className="subtitle has-text-centered">
+            Almost always refers to the prior day's final price of a security when the market officially closes for the day. It can apply to a stock, bond, commodity, futures or option contract, market index, or any other security.
+          </p>
+        </div>
+      </div>
+      <div className="column">
+        <div className="box">
+          <div className="title has-text-centered">
             Losers:
         </div>
           <p className="subtitle has-text-centered">
